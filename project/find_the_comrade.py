@@ -26,11 +26,7 @@ with open(path_ent, mode='r') as f:
     for line in f:
         splitted = line.split()
         poly_number.append(splitted[0]) # save line number
-        if splitted[2] != 'UN': # taking line in which *there is* a knot
-            knot_number.append(splitted[2]) # save 3rd column, i.e. type of knot
-                                            # see pdf with description of data
-        else:
-            knot_number.append('0') # if unknotted, save as 0
+        knot_number.append(splitted[2]) # save 3rd column, i.e. type of knot
 
 ################### reading file .dat to extrapolate sequences
 # array with polymers sequences as extracted from file
